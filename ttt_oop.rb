@@ -9,7 +9,7 @@ class Board
   end
 
   def []=(num, marker)
-    @squares[num].marker = marker    
+    @squares[num].marker = marker
   end
 
   def unmarked_keys
@@ -57,7 +57,7 @@ class Board
   def three_identical_markers?(squares)
     markers = squares.select(&:marked?).collect(&:marker)
     return false if markers.size != 3
-    markers.min == markers.max   
+    markers.min == markers.max
   end
 end
 
